@@ -2,6 +2,9 @@
 #LINE EDITOR V1.0
 #Author: Naveed Ahmed | Linux expert | Deployment Engineer
 #Company: PredictifyMe
+#Status: Incomplete Working on this script for making it more easy for end users.
+# Critics and feedbacks are highly welcomed mailto: naveed@predictify.me
+
 #Need to add 
 #1: save file algorithm 
 #2: read that same file algorithm
