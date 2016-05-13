@@ -2,6 +2,7 @@
 #Script Name: cpu.sh
 #Description: Install a cronjob to run this script after every minute, and then it will check for CPU 
 # utlization if CPU UTILIZATION > 50 it will send an email with highCPU utlization message
+#Ensure postfix and mail is installed and configured
 
 
 
