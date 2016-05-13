@@ -10,10 +10,13 @@
 crontab << EOF
 */1 * * * * /bin/bash /root/cpu.sh >/dev/null
 EOF
+publicip=`wget -q -O - 169.254.169.254/latest/meta-data/public-ipv4`
 total=`ps -A -o pcpu | tail -n+2 | paste -sd+ | bc`
 if (( $(bc <<< "$total > 50") )); then
-echo "CPU UTILIZATION IS $total high" | mail -s "HIGH CPU UTILIZATION" naveed_kumbhar@hotmail.com
+echo "CPU utilization is high $total"
+echo -e "CPU utilization : $total  \nHostname : $(hostname) \n Public IP : $publicip \n Automatic mail Generated! " | mail -s "Warning! HIGH CPU UTILIZATION on $(hostname)" naveed_kumbhar@hotmail.com
 else
-echo "Normal"
+echo "CPU utilization $total  is Normal"
 fi
+
 
