@@ -10,7 +10,7 @@
 crontab << EOF
 */1 * * * * /bin/bash /root/cpu.sh >/dev/null
 EOF
-publicip=`wget -q -O - 169.254.169.254/latest/meta-data/public-ipv4`
+publicip=`wget -q -O - 169.254.169.254/latest/meta-data/public-ipv4` # For AWS EC2 Instance
 total=`ps -A -o pcpu | tail -n+2 | paste -sd+ | bc`
 if (( $(bc <<< "$total > 50") )); then
 echo "CPU utilization is high $total"
