@@ -13,7 +13,7 @@ EOF
 publicip=`wget -q -O - 169.254.169.254/latest/meta-data/public-ipv4` # For AWS EC2 Instance
 total=`ps -A -o pcpu | tail -n+2 | paste -sd+ | bc`
 if (( $(bc <<< "$total > 50") )); then
-echo "CPU utilization is high $total"
+echo -e "CPU utilization : $total  \nHostname : $(hostname) \n Public IP : $publicip \n Automatic mail Generated! "
 echo -e "CPU utilization : $total  \nHostname : $(hostname) \n Public IP : $publicip \n Automatic mail Generated! " | mail -s "Warning! HIGH CPU UTILIZATION on $(hostname)" naveed_kumbhar@hotmail.com
 else
 echo "CPU utilization $total  is Normal"
