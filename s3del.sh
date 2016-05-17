@@ -21,7 +21,7 @@ fi
 # don't allow leading slash in bucketname
 firstchar=${1:0:1}
 if [ $firstchar = "/" ]; then
-  echo "ERROR: Do not start bucketname with a slash."
+  echo "ERROR: Do not start bucketname with a slash.."
   usage
 exit 2
 fi
