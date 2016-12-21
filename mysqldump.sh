@@ -3,7 +3,7 @@ host='yourhost'
 user='yourdbusername'
 password='yourdbpassword'
 directory=mydumps
-backup=database.tar.gz
+backup=all-database.tar.gz
 mkdir -p mydumps
 dbs=`mysql -h $host -u $user -p$password -e "SHOW DATABASES;" | tr -d "| " | grep -v Database | grep -v schema`
 for db in $dbs; do
