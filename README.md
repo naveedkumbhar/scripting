@@ -12,11 +12,12 @@ if your current branch is set to master it wont push ( for the safe side to not 
 
 
 #2: time.sh
-The script expects exactly one argument that represents a date and time in a specific format.
-If the script does not receive exactly one argument, it prints instructions on how to provide the correct date and time format.
-If the script receives exactly one argument, it attempts to set the system date and time using the provided argument.
 
-Usage Example
+- The script expects exactly one argument that represents a date and time in a specific format.
+- If the script does not receive exactly one argument, it prints instructions on how to provide the correct date and time format.
+- If the script receives exactly one argument, it attempts to set the system date and time using the provided argument.
+
+- Usage Example
 If you run the script with the argument 122409532014.00, it interprets this as:
 
 12 - Month (December)
