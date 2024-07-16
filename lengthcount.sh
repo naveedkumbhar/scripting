@@ -1,14 +1,20 @@
 #!/bin/bash
-#scriptname lengthcount
-#purpose    it will count the length of variable
-#author     Naveed
-#Company    Predictify.Me
 
+# Script Name: lengthcount
+# Purpose:     Counts the number of characters in a given input
+# Author:      Naveed Ahmed
+# Company:     Predictify.Me
+# Description: This script prompts the user to enter a value and then calculates and displays the length of the input.
 
-echo "Enter the value you want to count the characters used in"
-read niddu
-totalchar=`echo ${#niddu}`
-echo "Length of $niddu is $totalchar"
+# Prompt the user to enter a value
+echo "Please enter the value you want to count the characters of:"
+read input_value
 
+# Calculate the length of the input
+length=${#input_value}
 
-#END
+# Display the length of the input
+echo "The length of '$input_value' is $length characters."
+
+# End of script
+
