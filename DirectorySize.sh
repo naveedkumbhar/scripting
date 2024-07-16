@@ -1,7 +1,7 @@
 #!/bin/bash
 # ScriptName: DirectorySize.sh 
 # Author: Naveed Ahmed
-# Company: PredictifyMe
+# Company: DigitalOcean 
 # Description: This script calculates and displays the total size of a specified directory.
 
 # Prompt the user to enter the directory they want to check
