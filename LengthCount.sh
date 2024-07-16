@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Script Name: lengthcount
+# Script Name: LengthCount.sh
 # Purpose:     Counts the number of characters in a given input
 # Author:      Naveed Ahmed
-# Company:     Predictify.Me
+# Company:     DigitalOcean
 # Description: This script prompts the user to enter a value and then calculates and displays the length of the input.
 
 # Prompt the user to enter a value
