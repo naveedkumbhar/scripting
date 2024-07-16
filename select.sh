@@ -1,33 +1,43 @@
 #!/bin/bash -x
-#Author Naveed
-#Company PredictifyMe
-#Purpose of this script: i
-#Using select command (PS= Prompt Statement)
+# Author: Naveed
+# Company: DigitalOcean
+# Purpose of this script:
+# This script allows the user to search for files or directories within a specified path.
+# It uses the 'select' command for an interactive menu with a prompt statement (PS).
 
-PS3="Select [1] for searching files, [2] for Directories, [3] for exit "
+PS3="Select [1] for searching files, [2] for directories, [3] for exit: "
+
 select i in file directory exit
 do
-case $i in
-file)
-echo "Enter the path you want to search for directories/folders in it"i
-read dir
-if [ -d $dir ]; then
-ls -la $dir | grep ^-
-total=`ls -la $dir | grep ^- | wc -l`
-echo "Total numbers of files is $total"
-else
-echo "Wrong Path"
-fi;;
-directory)
-echo "Enter the path you want to search for directories/folders in it"
-read dir
-if [ -d $dir ] ;then
-ls -la $dir | grep ^d
-total=`ls -la $dir | grep  ^d | wc -l`
-echo "Total numbers of Directories/Folders is $total"
-else
-echo "Wrong path"
-fi;;
-exit) exit;;
-esac
+  case $i in
+    file)
+      echo "Enter the path you want to search for files in:"
+      read dir
+      if [ -d $dir ]; then
+        ls -la $dir | grep ^-
+        total=$(ls -la $dir | grep ^- | wc -l)
+        echo "Total number of files: $total"
+      else
+        echo "Invalid path"
+      fi
+      ;;
+    directory)
+      echo "Enter the path you want to search for directories/folders in:"
+      read dir
+      if [ -d $dir ]; then
+        ls -la $dir | grep ^d
+        total=$(ls -la $dir | grep ^d | wc -l)
+        echo "Total number of directories/folders: $total"
+      else
+        echo "Invalid path"
+      fi
+      ;;
+    exit)
+      exit
+      ;;
+    *)
+      echo "Invalid option. Please select a valid option."
+      ;;
+  esac
 done
+
