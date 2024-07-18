@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Author: Naveed Ahmed
-# Script Name: cpu.sh
+# Script Name: CPUAlert.sh
 # Description: This script installs a cron job to run itself every minute. It checks for CPU utilization 
 #              and if CPU utilization is greater than 50%, it sends an email with a high CPU utilization message.
 # Prerequisites: You must have Postfix or Exim installed as an outgoing mail server.
@@ -9,7 +9,7 @@
 
 # Install a cron job to run this script every minute
 # The cron job will redirect its output to /dev/null to prevent cron from sending emails every minute
-(crontab -l 2>/dev/null; echo "*/1 * * * * /bin/bash /root/cpu.sh >/dev/null") | crontab -
+(crontab -l 2>/dev/null; echo "*/1 * * * * /bin/bash /root/CPUAlert.sh >/dev/null") | crontab -
 
 # Fetch the public IP address of the server
 publicip=$(curl -s http://whatismijnip.nl | cut -d " " -f 5)
