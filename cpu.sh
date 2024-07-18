@@ -1,25 +1,34 @@
-#Author: Naveed Ahmed
-#Script Name: cpu.sh
-#Description: Install a cronjob to run this script after every minute, and then it will check for CPU 
-# utlization if CPU UTILIZATION > 50 it will send an email with highCPU utlization message
-#Prerequistic # You must have installed postfix or exim as outgoing mail server
-# Edit cronjob according to your requirement
-# If you're using 
-
-
-
 #!/bin/bash
-crontab << EOF
-*/1 * * * * /bin/bash /root/cpu.sh >/dev/null
-EOF
-publicip=`curl -s http://whatismijnip.nl |cut -d " " -f 5`
-total=`ps -A -o pcpu | tail -n+2 | paste -sd+ | bc`
+
+# Author: Naveed Ahmed
+# Script Name: cpu.sh
+# Description: This script installs a cron job to run itself every minute. It checks for CPU utilization 
+#              and if CPU utilization is greater than 50%, it sends an email with a high CPU utilization message.
+# Prerequisites: You must have Postfix or Exim installed as an outgoing mail server.
+#                Edit the cron job according to your requirements.
+
+# Install a cron job to run this script every minute
+# The cron job will redirect its output to /dev/null to prevent cron from sending emails every minute
+(crontab -l 2>/dev/null; echo "*/1 * * * * /bin/bash /root/cpu.sh >/dev/null") | crontab -
+
+# Fetch the public IP address of the server
+publicip=$(curl -s http://whatismijnip.nl | cut -d " " -f 5)
+
+# Calculate the total CPU utilization
+# -A: Select all processes
+# -o pcpu: Output only the CPU utilization column
+# tail -n+2: Skip the header line
+# paste -sd+: Concatenate the CPU percentages with '+' signs
+# bc: Calculate the sum
+total=$(ps -A -o pcpu | tail -n+2 | paste -sd+ | bc)
+
+# Check if the total CPU utilization is greater than 50%
 if (( $(bc <<< "$total > 50") )); then
-echo -e "\n\n\nCPU utilization : $total HIGH \nHostname : $(hostname) \nPublic IP : $publicip\n\n"
-echo -e "\nWarnnig!\nCPU utilization : $total High  \nHostname : $(hostname) \nPublic IP : $publicip \n\n\nAutomatic mail Generated! " | mail -s "Warning! HIGH CPU UTILIZATION on $(hostname) : $publicip" naveed_kumbhar@hotmail.com
+    # If CPU utilization is high, prepare the email content
+    echo -e "\n\n\nCPU utilization: $total HIGH\nHostname: $(hostname)\nPublic IP: $publicip\n\n"
+    echo -e "\nWarning!\nCPU utilization: $total HIGH\nHostname: $(hostname)\nPublic IP: $publicip\n\n\nAutomatic mail generated!" | mail -s "Warning! HIGH CPU UTILIZATION on $(hostname): $publicip" naveed_kumbhar@hotmail.com
 else
-echo -e "\n\n\nCPU utilization : $total is Normal  \nHostname : $(hostname) \nPublic IP : $publicip\n\n"
+    # If CPU utilization is normal, print a message
+    echo -e "\n\n\nCPU utilization: $total is Normal\nHostname: $(hostname)\nPublic IP: $publicip\n\n"
 fi
-
-
 
