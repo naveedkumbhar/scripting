@@ -27,5 +27,5 @@ If you run the script with the argument 122409532014.00, it interprets this as:
 2014 - Year
 .00 - Second
 
-./script.sh 122409532014.00
+./time.sh 122409532014.00
 
