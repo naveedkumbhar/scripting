@@ -31,7 +31,7 @@ If you run the script with the argument 122409532014.00, it interprets this as:
 ./TimeChange.sh 122409532014.00
 
 
-#3
+#3 GeneratePassword.sh 
 
 Explanation:
  - The display_help function provides a usage message to guide the user.
@@ -43,3 +43,5 @@ Explanation:
 
 chmod +x GeneratePassword.sh
 ./GeneratePassword.sh 14
+
+#4 CPUAlert.sh
