@@ -42,4 +42,4 @@ Explanation:
 - You can save this script as GeneratePassword.sh, make it executable, and run it with the desired password length as an argument:
 
 chmod +x GeneratePassword.sh
-./GeneratePassword.sh 16
+./GeneratePassword.sh 14
