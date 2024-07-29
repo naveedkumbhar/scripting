@@ -4,7 +4,7 @@
 # email: naveed_kumbhar@hotmail.com 
 
 
-#1: gitpush
+#1: gitpush.sh
 - This utility is need of the time, specifically when you are working frequently through terminal and make changes in files / code with this utility you can quickly push the code to repository rest this script will handle it. 
 
 Usage example:
