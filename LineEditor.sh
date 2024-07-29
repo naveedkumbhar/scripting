@@ -56,7 +56,7 @@ fi;;
 end)
 echo "Add string to the end of line" 
 echo
-read -p "Insert exact file location you want to edit ex:/home/niddu/Desktop/file: " file
+read -p "Insert exact file location you want to edit ex:/home/naveed/Desktop/file: " file
 if [ -f $file ]; then
 read -p "Insert the text you want to add at the end of line it will be like : /naveed.html: " text
 sed "s/$/\/$text/" $file
@@ -66,7 +66,7 @@ fi;;
 start)
 echo "Add string from the begening"
 echo
-read -p "Insert exact file location you want to edit ex:/home/niddu/Desktop/file: " file
+read -p "Insert exact file location you want to edit ex:/home/naveed/Desktop/file: " file
 if [ -f $file ] ; then
 read -p "Insert the string you want to add from the begening" text
 sed "s/^/$text/" $file
@@ -76,7 +76,7 @@ fi;;
 replace)
 echo "Replace the string"
 echo
-read -p "Insert exact file location you want to edit ex:/home/niddu/Desktop/file: " file
+read -p "Insert exact file location you want to edit ex:/home/naveed/Desktop/file: " file
 if [ -f $file ];then
 read -p "Text you want to change: " change
 read -p "String you want to replace with $change: " text
