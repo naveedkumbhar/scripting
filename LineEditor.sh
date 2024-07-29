@@ -1,11 +1,11 @@
 #!/bin/bash
 #LINE EDITOR V1.0
 #Author: Naveed Ahmed | Linux expert | Deployment Engineer
-#Company: PredictifyMe
+#Company: DigitalOcean
 #Status: Incomplete Working on this script for making it more easy for end users.
-# Critics and feedbacks are highly welcomed mailto: naveed@predictify.me
+#Critics and feedbacks are highly welcomed mailto: naveed_kumbhar@hotmail.com
 
-#Need to add 
+# To-Dos
 #1: save file algorithm 
 #2: read that same file algorithm
 #3: Remove blank lines
@@ -21,9 +21,6 @@
 #  |_____|_|_| |_|\___| |_____\__,_|_|\__\___/|_| version 1.0  
                                                  
 
-if [ $(whoami) != "root" ] ; then
-echo "Only root user can run this script"
-else
 echo "Line editor for linux Using RegEx"
 PS3="Select [1] for removing string, [2] Add string at the end of line, [3] add string from the beggening of line, [4] Replace the string, [5] exit: "
 select i in remove end start replace exit
@@ -90,4 +87,3 @@ fi;;
 exit) exit;;
 esac
 done
-fi
