@@ -1,4 +1,6 @@
 #!/bin/bash
+# Description
+# The script ensures that the user provides valid arguments, constructs the correct S3 bucket path, lists files in the bucket, and deletes files older than the specified time period. The checks and validations help avoid common mistakes, such as including unnecessary prefixes or slashes in the bucket name.
 
 usage (){
   echo " "
