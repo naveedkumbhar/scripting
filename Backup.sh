@@ -1,6 +1,6 @@
 #!/bin/bash
-# Author: Naveed
-# Company: PredictifyMe
+# Author: Naveed Ahmed
+# Company: DigitalOcean 
 # Script purpose: Create a local backup of web data and transfer it to a remote server
 # Version: 2.0
 
