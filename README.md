@@ -45,3 +45,8 @@ chmod +x GeneratePassword.sh
 ./GeneratePassword.sh 14
 
 #4 CPUAlert.sh
+
+This script installs a cron job to run itself every minute. It checks for CPU utilization and if CPU utilization is greater than 50%, it sends an email with a high CPU utilization message.
+Prerequisites: You must have Postfix or Exim installed as an outgoing mail server.
+Note: Edit the cron job according to your requirements.
+
