@@ -50,3 +50,6 @@ This script installs a cron job to run itself every minute. It checks for CPU ut
 Prerequisites: You must have Postfix or Exim installed as an outgoing mail server.
 Note: Edit the cron job according to your requirements.
 
+
+#5 ResourceMonitoring.sh
+This script start monitoring the system resources i.e memory cpu disk and write it to some file. you can add this script in cron for continues monitoring the resources
