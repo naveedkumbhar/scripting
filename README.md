@@ -53,3 +53,6 @@ Note: Edit the cron job according to your requirements.
 
 #5 ResourceMonitoring.sh
 This script start monitoring the system resources i.e memory cpu disk and write it to some file. you can add this script in cron for continues monitoring the resources
+
+# NotificationSend.sh
+This script is basically a reminder script or to send notification on screen this is helpful in many cases specially with scripting
