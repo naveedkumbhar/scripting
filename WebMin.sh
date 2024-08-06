@@ -1,6 +1,6 @@
 #!/bin/bash
 #Author: Naveed
-#dated: 25/08/2016
+#dated: 06/08/2024
 publicip=`curl -s http://whatismijnip.nl |cut -d " " -f 5`
 echo "WebMin Installation script"
 echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
