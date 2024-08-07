@@ -60,3 +60,6 @@ This script is basically a reminder script or to send notification on screen thi
 #7 WebMin.sh
 
 This script will install latest webmin package on debian based OS
+
+#8 IPtablesScript.sh
+This script will add/create common IPTABLES rules 
