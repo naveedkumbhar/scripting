@@ -63,3 +63,7 @@ This script will install latest webmin package on debian based OS
 
 #8 IPtablesScript.sh
 This script will add/create common IPTABLES rules 
+
+#9 RestoreDB.sh
+
+This script will restore the database into MySQL by providing user and password
