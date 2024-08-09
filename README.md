@@ -67,3 +67,7 @@ This script will add/create common IPTABLES rules
 #9 RestoreDB.sh
 
 This script will restore the database into MySQL by providing user and password
+
+
+# S3DeleteObjects.sh
+d time period. The checks and validations help avoid common mistakes, such as including unnecessary prefixes or slashes in the bucket name.ied time period. The checks and validations help avoid common mistakes, such as including unnecessary prefixes or slashes in the bucket name.
