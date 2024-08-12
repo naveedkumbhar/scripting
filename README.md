@@ -75,3 +75,6 @@ d time period. The checks and validations help avoid common mistakes, such as in
 #11 MySQLDump.sh
 
 This script is used for creating MySQL backup and can be scheduledd through cron jobs
+
+#12 LengthCount.sh
+This script prompts the user to enter a value and then calculates and displays the length of the input.
