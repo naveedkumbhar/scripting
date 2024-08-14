@@ -82,3 +82,7 @@ This script prompts the user to enter a value and then calculates and displays t
 #13 .conkyrc
 
 This is conky configuration used for customized widget on desktop screen
+
+#14 DirectorySize.sh
+
+This script will take input of the directory and return the size of that directory
