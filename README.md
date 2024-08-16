@@ -86,3 +86,7 @@ This is conky configuration used for customized widget on desktop screen
 #14 DirectorySize.sh
 
 This script will take input of the directory and return the size of that directory
+
+#15 .vimrc
+
+This is customized vimrc configuration file for vim ( editor ) 
