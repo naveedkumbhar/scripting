@@ -2,7 +2,8 @@
 # Author Naveed Ahmed
 # I will put all my scripts here now and in future too
 # email: naveed_kumbhar@hotmail.com 
-# Last update: 08/16/2024
+# Last update: 08/17/2024
+# Company DigitalOcean
 
 #1: GitPush.sh
 - This utility is need of the time, specifically when you are working frequently through terminal and make changes in files / code with this utility you can quickly push the code to repository rest this script will handle it. 
