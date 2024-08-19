@@ -34,7 +34,8 @@ sudo apt-get remove npm -y
 #${Color_Cyan}Downloading latest Node.js ARM-version.. ${Color_Off}"
 
 echo -e "${Color_Cyan}Installing Node.js .. this will take a while .. ${Color_Off}"
-sudo apt-get install nodejs
+sudo apt-get install nodejs -y
+sudo apt-get install npm -y
 
 # cleanup
 echo -e "
