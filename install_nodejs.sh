@@ -30,18 +30,15 @@ ${Color_Cyan}Removing npm... ${Color_Off}"
 sudo apt-get remove npm -y 
 
 # install latest
-echo -e "
-${Color_Cyan}Downloading latest Node.js ARM-version.. ${Color_Off}"
-cd /tmp/
-wget https://node-arm.herokuapp.com/node_latest_armhf.deb
+#echo -e "
+#${Color_Cyan}Downloading latest Node.js ARM-version.. ${Color_Off}"
 
 echo -e "${Color_Cyan}Installing Node.js .. this will take a while .. ${Color_Off}"
-sudo dpkg -i node_latest_armhf.deb
+sudo apt-get install nodejs
 
 # cleanup
 echo -e "
 ${Color_Cyan}Cleaning up .. ${Color_Off}"
-rm -rf /tmp/node_latest_armhf.deb
 sudo apt-get autoremove -y
 
 # confirm version
