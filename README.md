@@ -2,7 +2,7 @@
 # Author Naveed Ahmed
 # I will put all my scripts here now and in future too
 # email: naveed_kumbhar@hotmail.com 
-# Last update: 08/18/2024
+# Last update: 08/19/2024
 # Company DigitalOcean
 
 #1: GitPush.sh
